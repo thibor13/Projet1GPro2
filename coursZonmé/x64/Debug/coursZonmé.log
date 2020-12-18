@@ -1,0 +1,56 @@
+﻿  Char.cpp
+D:\coursZonmé\coursZonmé\Char.cpp(6,11): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé\coursZonmé\Char.cpp(13,11): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Char.cpp(16,11): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Char.cpp(29,19): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Char.cpp(30,19): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Char.cpp(34,13): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé\coursZonmé\Char.cpp(44,13): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé\coursZonmé\Char.cpp(62,15): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé\coursZonmé\Char.cpp(81,16): warning C4305: '*=' : troncation de 'double' à 'float'
+  Game.cpp
+D:\coursZonmé\coursZonmé\Game.cpp(14,67): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\coursZonmé\coursZonmé\Game.cpp(14,49): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\coursZonmé\coursZonmé\Game.cpp(53,47): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Game.cpp(53,24): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Game.cpp(107,14): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Game.cpp(116,19): warning C4244: '-=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Game.cpp(119,20): warning C4305: '=' : troncation de 'double' à 'float'
+  Turtle.cpp
+D:\coursZonmé\coursZonmé\Turtle.hpp(52,19): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé\coursZonmé\Turtle.hpp(53,19): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé\coursZonmé\Turtle.hpp(86,21): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+D:\coursZonmé\coursZonmé\Turtle.cpp(13,39): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé\coursZonmé\Turtle.cpp(15,53): warning C4244: '=' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+D:\coursZonmé\coursZonmé\Turtle.cpp(16,53): warning C4244: '=' : conversion de 'double' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+  Génération de code en cours...
+MSVCRTD.lib(exe_main.obj) : error LNK2019: symbole externe non résolu main référencé dans la fonction "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+D:\coursZonmé\x64\Debug\coursZonmé.exe : fatal error LNK1120: 1 externes non résolus
