@@ -143,13 +143,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Char.cpp" />
+    <ClCompile Include="coursZonmé.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Turtle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Char.hpp" />
+    <ClInclude Include="Dice.hpp" />
     <ClInclude Include="Game.hpp" />
-    <ClInclude Include="Turtle.hpp" />
+    <ClInclude Include="Interp.hpp" />
+    <ClInclude Include="Lib.hpp" />
+    <ClInclude Include="AllTexture.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

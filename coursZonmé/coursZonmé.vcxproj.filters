@@ -21,7 +21,7 @@
     <ClCompile Include="Game.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Turtle.cpp">
+    <ClCompile Include="coursZonmé.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,16 @@
     <ClInclude Include="Char.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="Turtle.hpp">
+    <ClInclude Include="Lib.hpp">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Dice.hpp">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Interp.hpp">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="AllTexture.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>

@@ -3,7 +3,7 @@
 //#include "HotReloadShader.hpp"
 
 #ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS //messages erreurs de sécu
+#define _CRT_SECURE_NO_WARNINGS
 #endif
 
 static int cols = 1280 / Char::GRID_SIZE;
@@ -12,32 +12,30 @@ static int lastLine = 720 / Char::GRID_SIZE - 1;
 Game::Game(sf::RenderWindow* win) {
 	this->win = win;
 	bg = sf::RectangleShape(Vector2f(win->getSize().x, win->getSize().y));
+	//displace = sf::RectangleShape(Vector2f(1280, 720));
 
 	bool isOk = tex.loadFromFile("res/bg.jpg");
 	if (!isOk) {
 		printf("ERR : LOAD FAILED\n");
 	}
+
 	bg.setTexture(&tex);
+	//displace.setTexture(&tex);
 	bg.setSize(sf::Vector2f(1280, 720));
 
-	//bgShader = new HotReloadShader("res/bg.vert", "res/bg_time.frag");
+	/*bgShader = new HotReloadShader("res/bg.vert", "res/bg_time.frag");
+	doubleShader = new HotReloadShader("res/bg.vert", "res/double.frag");
+	displaceShader = new HotReloadShader("res/bg.vert", "res/displace.frag");*/
 
 	for (int i = 0; i < 1280 / Char::GRID_SIZE; ++i) {
+		walls.push_back(Vector2i(i, 0));
 		walls.push_back(Vector2i(i, lastLine));
+
+		walls.push_back(Vector2i(0, i));
+		walls.push_back(Vector2i(cols - 1, i));
 	}
 
-	walls.push_back(Vector2i(0, lastLine - 1));
-	walls.push_back(Vector2i(0, lastLine - 2));
-	walls.push_back(Vector2i(0, lastLine - 3));
 
-	walls.push_back(Vector2i(cols - 1, lastLine - 1));
-	walls.push_back(Vector2i(cols - 1, lastLine - 2));
-	walls.push_back(Vector2i(cols - 1, lastLine - 3));
-
-	walls.push_back(Vector2i(cols >> 2, lastLine - 2));
-	walls.push_back(Vector2i(cols >> 2, lastLine - 3));
-	walls.push_back(Vector2i(cols >> 2, lastLine - 4));
-	walls.push_back(Vector2i((cols >> 2) + 1, lastLine - 4));
 	cacheWalls();
 	//mario.setPosition((int)1280 * 0.5, 720);
 
@@ -62,39 +60,47 @@ void Game::processInput(sf::Event ev) {
 		closing = true;
 		return;
 	}
-	if (ev.type == sf::Event::KeyReleased) {
-		/*
-		if (ev.key.code == sf::Keyboard::Key::Z) {
+
+
+	//add walls on click
+	if (ev.type == sf::Event::MouseButtonPressed) {
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LShift)) {
+			int wx = ev.mouseButton.x / Char::GRID_SIZE;
+			int wy = ev.mouseButton.y / Char::GRID_SIZE;
+			for (auto iter = walls.begin(); iter != walls.end(); iter++) {
+				auto& w = *iter;
+				if (w.x == wx && w.y == wy) {
+					iter = walls.erase(iter);
+					cacheWalls();
+					return;
+				}
+			}
+			
 		}
+		else {
+			float destRx = 1.0 * ev.mouseButton.x / Char::GRID_SIZE;
+			float destRy = 1.0 * ev.mouseButton.y / Char::GRID_SIZE;
 
-		if (ev.key.code == sf::Keyboard::Key::S) {
+			float myRx = mario.cx + mario.rx;
+			float myRy = mario.cy + mario.ry;
 
+			float dx = destRx - myRx;
+			float dy = destRy - myRy;
+
+			float len = sqrt(dx * dx + dy * dy);
+
+			if (len != 0.0) {
+				mario.setState(WalkTo);
+
+				float dirX = dx / len;
+				float dirY = dy / len;
+				mario.speedX = dirX * 10;
+				mario.speedY = dirY * 10;
+				mario.destX = destRx;
+				mario.destY = destRy;
+			}
 		}
-
-		if (ev.key.code == sf::Keyboard::Key::Q) {
-		}
-
-		if (ev.key.code == sf::Keyboard::Key::D) {
-		}
-		*/
-
-		if (ev.key.code == sf::Keyboard::Key::R) {
-			mario.setCellPosition(cols >> 1, lastLine - 1);
-		}
-
-		if (ev.key.code == sf::Keyboard::Key::F) {
-			//parse();
-		}
-		// ouvrir le descripteur de fichier
-		//
-		// F lire le ficher
-		// lire 0 pour avancer
-		// lire 1 pour reculer
-		// lire 2 pour tourner a g / 3 tourner a droite
-		// execute la liste de commande
-		// on ferme le fichier
-
-
 	}
 }
 
@@ -106,8 +112,10 @@ void Game::update(double dt) {
 
 	g_time += dt;
 	//if (bgShader) bgShader->update(dt);
+	//if (doubleShader) doubleShader->update(dt);
+	//if (displaceShader) displaceShader->update(dt);
 
-	//beforeParts.update(dt);
+//	beforeParts.update(dt);
 
 	mario.update(dt);
 
@@ -123,20 +131,30 @@ void Game::update(double dt) {
 void Game::draw(sf::RenderWindow& win) {
 	if (closing) return;
 
-	sf::RenderStates states = sf::RenderStates::Default;
-	//sf::Shader* sh = &bgShader->sh;
-	///states.texture = bg.getTexture();
-	states.blendMode = sf::BlendAdd;
-	//states.shader = sh;
-	//sh->setUniform("texture", tex);
-	//sh->setUniform("time", g_time);
-	win.draw(bg, states);
+	{
+		sf::RenderStates states = sf::RenderStates::Default;
+		//sf::Shader* sh = &bgShader->sh;
+		//states.shader = sh;
+		//sh->setUniform("texture", tex);
+
+		//sh->setUniform("time", g_time);
+		win.draw(bg, states);
+	}
+
+	{
+		sf::RenderStates states = sf::RenderStates::Default;
+		/*sf::Shader* sh = &displaceShader->sh;
+		states.shader = sh;
+		sh->setUniform("texture", tex);
+		sh->setUniform("texture2", displaceMap);
+		sh->setUniform("uvTranslateDisp", Glsl::Vec2::Vector2(0, 0));
+		sh->setUniform("uvScaleDisp", Glsl::Vec2::Vector2(1, 1));
+		sh->setUniform("time", g_time);*/
+		//win.draw(displace, states);
+	}
 
 	//beforeParts.draw(win);
 
-	for (sf::RectangleShape& r : wallSprites)
-		win.draw(r);
-	//turtle.draw(win);
 	mario.draw(win);
 
 	//afterParts.draw(win);
@@ -144,31 +162,58 @@ void Game::draw(sf::RenderWindow& win) {
 
 void Game::pollInput(double dt) {
 
-	float lateralSpeed = 8.0;
-	float maxSpeed = 40.0;
+	float lateralSpeed = 1.0;
+	float maxSpeed = 10.0;
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LShift)) {
+		mario.setState(Running);
+	}
+
+	if (mario.state == Running) {
+		lateralSpeed *= 2.0;
+		maxSpeed *= 10.0;
+	}
+
+	bool moved = false;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q)) {
 		mario.speedX -= lateralSpeed;
 		if (mario.speedX < -maxSpeed)
 			mario.speedX = -maxSpeed;
+		moved = true;
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) {
 		mario.speedX += lateralSpeed;
 		if (mario.speedX > maxSpeed)
 			mario.speedX = maxSpeed;
+		moved = true;
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) {
-		if (mario.state != Jumping) {
-			mario.speedY = -100;
-			mario.state = Jumping;
-		}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Z)) {
+		mario.speedY -= lateralSpeed;
+		if (mario.speedY < -maxSpeed)
+			mario.speedY = -maxSpeed;
+		moved = true;
 	}
 
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::T)) {
-		mario.setCellPosition(cols >> 1, lastLine - 30);
-		mario.state = Jumping;
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) {
+		mario.speedY += lateralSpeed;
+		if (mario.speedY > maxSpeed)
+			mario.speedY = maxSpeed;
+		moved = true;
 	}
+
+	if (moved) {
+		if (mario.state == Cover)
+			mario.setState(Walking);
+		//walkin  nope 
+		//running nope
+		if (mario.state == Idle)
+			mario.setState(Walking);
+
+	}
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) {
 		if (!wasPressed) {
 			onSpacePressed();

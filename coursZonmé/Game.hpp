@@ -3,15 +3,12 @@
 #pragma once
 
 #include <vector>
-
 #include "SFML/Graphics.hpp"
 #include "SFML/System.hpp"
 #include "SFML/Window.hpp"
-
 //#include "Particle.hpp"
 //#include "ParticleMan.hpp"
 #include "Char.hpp"
-
 
 using namespace sf;
 
@@ -25,7 +22,7 @@ public:
 	sf::Texture tex;
 	Char mario;
 	bool closing = false;
-
+	bool shift = false;
 
 	std::vector<sf::Vector2i>walls;
 	std::vector<sf::RectangleShape>wallSprites;
@@ -36,7 +33,6 @@ public:
 	Game(sf::RenderWindow* win);
 
 	void cacheWalls();
-
 	void processInput(sf::Event ev);
 	bool wasPressed = false;
 	void pollInput(double dt);
