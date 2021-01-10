@@ -1,6 +1,6 @@
 #include "Char.hpp"
 #include "Game.hpp"
-//#include "HotReloadShader.hpp"
+#include "HotReloadShader.hpp"
 
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
@@ -20,12 +20,12 @@ Game::Game(sf::RenderWindow* win) {
 	}
 
 	bg.setTexture(&tex);
-	//displace.setTexture(&tex);
+	
 	bg.setSize(sf::Vector2f(1280, 720));
 
-	/*bgShader = new HotReloadShader("res/bg.vert", "res/bg_time.frag");
-	doubleShader = new HotReloadShader("res/bg.vert", "res/double.frag");
-	displaceShader = new HotReloadShader("res/bg.vert", "res/displace.frag");*/
+	bgShader = new HotReloadShader("res/bg.vert", "res/bg_time.frag");
+	//doubleShader = new HotReloadShader("res/bg.vert", "res/double.frag");
+	//displaceShader = new HotReloadShader("res/bg.vert", "res/displace.frag");
 
 	for (int i = 0; i < 1280 / Char::GRID_SIZE; ++i) {
 		walls.push_back(Vector2i(i, 0));
@@ -35,13 +35,17 @@ Game::Game(sf::RenderWindow* win) {
 		walls.push_back(Vector2i(cols - 1, i));
 	}
 
-
 	cacheWalls();
-	//mario.setPosition((int)1280 * 0.5, 720);
 
+	//perso
 	mario = Char(this);
-	mario.setCellPosition(cols >> 1, lastLine - 1);
-}
+	mario.setCellPosition(cols >> 1, lastLine -25); // spr pos
+	mario.spr.setScale(sf::Vector2f(0.08f, 0.16f));
+	mario.spr.setTexture(mario.texturing.arrayIdle[0]);
+	
+	
+	
+};
 
 void Game::cacheWalls()
 {
@@ -111,14 +115,13 @@ void Game::update(double dt) {
 	pollInput(dt);
 
 	g_time += dt;
-	//if (bgShader) bgShader->update(dt);
+	if (bgShader) bgShader->update(dt);
 	//if (doubleShader) doubleShader->update(dt);
 	//if (displaceShader) displaceShader->update(dt);
-
-//	beforeParts.update(dt);
+    //beforeParts.update(dt);
 
 	mario.update(dt);
-
+	
 	//afterParts.update(dt);
 
 	g_tickTimer -= dt;
@@ -130,7 +133,6 @@ void Game::update(double dt) {
 
 void Game::draw(sf::RenderWindow& win) {
 	if (closing) return;
-
 	{
 		sf::RenderStates states = sf::RenderStates::Default;
 		//sf::Shader* sh = &bgShader->sh;
@@ -167,13 +169,15 @@ void Game::pollInput(double dt) {
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LShift)) {
 		mario.setState(Running);
+		mario.currentFrame = 0;
+		mario.maxFrame = 11;
 	}
 
 	if (mario.state == Running) {
 		lateralSpeed *= 2.0;
 		maxSpeed *= 10.0;
 	}
-
+	
 	bool moved = false;
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Q)) {
 		mario.speedX -= lateralSpeed;
@@ -205,13 +209,15 @@ void Game::pollInput(double dt) {
 	}
 
 	if (moved) {
+
 		if (mario.state == Cover)
 			mario.setState(Walking);
-		//walkin  nope 
-		//running nope
+		
 		if (mario.state == Idle)
 			mario.setState(Walking);
 
+		mario.currentFrame = 0;
+		mario.maxFrame = 13;
 	}
 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) {

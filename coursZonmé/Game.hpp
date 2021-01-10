@@ -18,7 +18,7 @@ public:
 	sf::RenderWindow* win = nullptr;
 
 	sf::RectangleShape  bg;
-	//HotReloadShader* bgShader = nullptr;
+	HotReloadShader* bgShader = nullptr;
 	sf::Texture tex;
 	Char mario;
 	bool closing = false;

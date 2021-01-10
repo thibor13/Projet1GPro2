@@ -14,10 +14,9 @@ using namespace sf;
 
 int main()
 {
-	bool shift = false;
-	
 	sf::RenderWindow window(sf::VideoMode(1280, 720, 32), "SFML works!");
 	window.setVerticalSyncEnabled(true);
+
 	Font font;
 
 	if (!font.loadFromFile("res/ARIAL.TTF")) {
@@ -30,8 +29,6 @@ int main()
 		cout << "ERROR NO SHADER SYSTEM" << endl;
 		return 1;
 	}
-
-	
 
 	Game g(&window);
 

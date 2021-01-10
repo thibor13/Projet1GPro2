@@ -15,6 +15,7 @@ enum State {
 	Running,
 	Cover,
 	WalkTo,
+	Dead,
 };
 
 class Char;
@@ -23,16 +24,19 @@ class Char;
 class Char {
 public:
 	static constexpr int GRID_SIZE = 16;
-	
 	AllTexture texturing;
 	sf::Sprite spr;
-	//sf::RectangleShape	spr;
+	float duration;
+	int currentFrame;
+	int lastFrame;
+	int maxFrame;
+
+	Clock cloks;
+	Time dt;
+	
 	Game* game = nullptr;
 
 	Char(Game* g = nullptr) {
-		//spr = RectangleShape(Vector2f(16, 16 * 3));
-		spr.setTexture(texturing.textureIdle1);
-		
 		spr.setOrigin(8, 16 * 2.5);
 		this->game = g;
 		
@@ -57,7 +61,7 @@ public:
 
 	void setCellPosition(int cx, int cy);
 	void setPosition(int rpx, int rpy);
-
+	void spriteUpdate(float dt);
 
 
 	Vector2f getPositionPixel() {
@@ -77,4 +81,7 @@ public:
 	void setState(State st);
 	bool isWallHit(int cx, int cy);
 	void onWallCollision();
+
+
 };
+

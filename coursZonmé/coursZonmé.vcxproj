@@ -117,6 +117,7 @@
       <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\coursZonmé\libs\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,14 +146,18 @@
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="coursZonmé.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="HotReloadShader.cpp" />
+    <ClCompile Include="Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Char.hpp" />
     <ClInclude Include="Dice.hpp" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="HotReloadShader.hpp" />
     <ClInclude Include="Interp.hpp" />
     <ClInclude Include="Lib.hpp" />
     <ClInclude Include="AllTexture.hpp" />
+    <ClInclude Include="Scene.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

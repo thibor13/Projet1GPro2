@@ -1,5 +1,6 @@
 #include "Char.hpp"
 #include "Game.hpp"
+#include "AllTexture.hpp"
 
 void Char::setCellPosition(int cx, int cy) {
 	rx = 0.5;
@@ -25,6 +26,8 @@ void Char::update(double dt) {
 
 	rx += speedX * dt;
 	ry += speedY * dt;
+
+	spriteUpdate(dt);
 
 	while (rx > 1) {
 		if (isWallHit(cx + 1, cy)) {
@@ -73,37 +76,13 @@ void Char::update(double dt) {
 	switch (state)
 	{
 	case WalkTo:
-		/*
-		if (	isWallHit(cx, cy - 1)
-			||	 isWallHit(cx, cy + 1)
-			|| isWallHit(cx - 1, cy)
-			|| isWallHit(cx + 1, cy)
-			) {
-			stop();
-		}
-		*/
-		/*
-		if (speedX > 0 && isWallHit( cx + 1, cy)) {
-			stop();
-		}
-		else if (speedX < 0 && isWallHit(cx - 1, cy)) {
-			stop();
-		}
-		else if (speedY < 0 && isWallHit(cx, cy -1)) {
-			stop();
-		}
-		else if (speedY >0 && isWallHit(cx, cy + 1)) {
-			stop();
-		}
-		else
-		*/
-	{
+	
 		if ((((int)destX) == cx) && (((int)destY) == cy)) {
 			speedX = 0.0;
 			speedY = 0.0;
 			setState(Idle);
 		}
-	}
+	
 	break;
 	case Idle:
 		if (
@@ -122,6 +101,8 @@ void Char::update(double dt) {
 			speedX = 0.0;
 			speedY = 0.0;
 			setState(Idle);
+			maxFrame = 15;
+			currentFrame = 0;
 		}
 		break;
 	case Running:
@@ -129,6 +110,8 @@ void Char::update(double dt) {
 			speedX = 0.0;
 			speedY = 0.0;
 			setState(Idle);
+			maxFrame = 15;
+			currentFrame = 0;
 		}
 		break;
 	default:
@@ -141,10 +124,43 @@ void Char::update(double dt) {
 	spr.setPosition(getPositionPixel());
 }
 
+void Char::spriteUpdate(float dt) {
+	duration += dt;
+
+	if (duration > 0.1f) {
+		duration = 0;
+		currentFrame = (currentFrame + 1)% maxFrame;
+
+		switch (state)
+		{
+		case Idle:
+			spr.setTexture(texturing.arrayIdle[currentFrame]);
+			break;
+		case Walking:
+			spr.setTexture(texturing.arrayWalk[currentFrame]);
+			break;
+		case Running:
+			spr.setTexture(texturing.arrayRun[currentFrame]);
+			break;
+		case Cover:
+			break;
+		case WalkTo:
+			break;
+		case Dead:
+			spr.setTexture(texturing.arrayDead[currentFrame]);
+			break;
+		default:
+			break;
+		}
+	}
+}
+
 void Char::stop() {
 	speedX = 0.0;
 	speedY = 0.0;
 	setState(Idle);
+	maxFrame = 15;
+	currentFrame = 0;
 }
 
 void Char::defaultFriction() {
@@ -157,26 +173,24 @@ void Char::setState(State st) {
 
 	destX = 0;
 	destY = 0;
+
 	defaultFriction();
 
 	switch (state)
 	{
 	case WalkTo:
-		//spr.setFillColor(sf::Color(0x6a6a6aff));
 		frictX = 1.0;
 		frictY = 1.0;
 		break;
 	case Idle:
-		//spr.setFillColor(sf::Color(0xffffffff));
 		break;
 	case Cover:
-		//spr.setFillColor(sf::Color(0xF0E452ff));
 		break;
 	case Walking:
-		//spr.setFillColor(sf::Color(0x57FAB1ff));
 		break;
 	case Running:
-		//spr.setFillColor(sf::Color(0xF75E59ff));
+		break;
+	case Dead:
 		break;
 	default:
 		break;
