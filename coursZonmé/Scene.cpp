@@ -40,6 +40,8 @@ void Menu::MoveUp() {
 		selectedIndex--;
 		menu[selectedIndex].setColor(Color::Red);
 	}
+}
+void Menu::MoveDown() {
 
 	if (selectedIndex + 1 < MAX_NUMBER_OF_ITEMS) {
 
@@ -49,12 +51,13 @@ void Menu::MoveUp() {
 	}
 }
 
-Levels::Game(float width, float height) {
+GameSc::GameSc(float width, float height) {
 
 
 
 }
 
-Levels::~Game() {
+GameSc::~GameSc() {
 
 }
+

@@ -8,10 +8,10 @@ using namespace sf;
 class AllTexture{
 public:
 	
-	Texture arrayIdle[15];
-	Texture arrayRun[10];
-	Texture arrayDead[16];
-	Texture arrayWalk[12];
+	Texture arrayIdle[16];
+	Texture arrayRun[11];
+	Texture arrayDead[17];
+	Texture arrayWalk[13];
 
 	Texture kdoSmall;
 	Texture kdoMedium;
@@ -146,7 +146,5 @@ public:
 		if (!arrayDead[16].loadFromFile("res/DEAD (17).PNG"))
 			printf("Not load : DEAD 17");
 
-		
 	}
-
 };

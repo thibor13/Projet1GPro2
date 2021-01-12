@@ -31,7 +31,7 @@ int main()
 		return 1;
 	}
 
-	Menu menu(window.getSize().x, window.getSize().y);
+	Menu menu(window.getSize().x, window.getSize().y); //size menu 
 	Game g(&window);
 
 	Vector2i winPos;
@@ -58,6 +58,7 @@ int main()
 		sf::Event event;
 		while (window.pollEvent(event)) { //sort un evenement de la liste pour le traiter
 
+			//scene Manage
 			switch (event.type) {
 
 			case Event::KeyReleased:
@@ -69,8 +70,9 @@ int main()
 				case Keyboard::Down:
 					menu.MoveDown();
 					break;
-				case Keyboard::Return:
+				case Keyboard::Return: 
 					switch (menu.getPressedIndex()) {
+
 					case 0:
 						//load game scene 
 						break;
@@ -79,10 +81,9 @@ int main()
 						window.close();
 						break;
 					}
-					
 				}
 				break;
-			case Event::Closed:
+			case Event::Closed: 
 				window.close();
 				break;
 			}

@@ -143,8 +143,10 @@ void Char::spriteUpdate(float dt) {
 			spr.setTexture(texturing.arrayRun[currentFrame]);
 			break;
 		case Cover:
+			spr.setTexture(texturing.arrayIdle[currentFrame]);
 			break;
 		case WalkTo:
+			spr.setTexture(texturing.arrayWalk[currentFrame]);
 			break;
 		case Dead:
 			spr.setTexture(texturing.arrayDead[currentFrame]);

@@ -4,7 +4,7 @@
 using namespace std;
 using namespace sf;
 
-#define MAX_NUMBER_OF_ITEMS 2 //number of button
+#define MAX_NUMBER_OF_ITEMS 2 //number of titles button
 
 class Menu{
 public:
@@ -23,12 +23,12 @@ private:
 	Font font;
 };
 
-class Levels{
+class GameSc{
 public:
 
-	Game(float width, float height);
-	~Game();
+	GameSc(float width, float height);
+	~GameSc();
 
-	void draw(RenderWindow& window);
+	
 	
 };
