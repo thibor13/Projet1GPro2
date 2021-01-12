@@ -26,7 +26,7 @@ public:
 	static constexpr int GRID_SIZE = 16;
 	AllTexture texturing;
 	sf::Sprite spr;
-	float duration;
+	float duration = 0.0f;
 	int currentFrame;
 	int lastFrame;
 	int maxFrame;

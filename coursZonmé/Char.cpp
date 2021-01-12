@@ -127,7 +127,7 @@ void Char::update(double dt) {
 void Char::spriteUpdate(float dt) {
 	duration += dt;
 
-	if (duration > 0.1f) {
+	if (duration > 0.04f) {
 		duration = 0;
 		currentFrame = (currentFrame + 1)% maxFrame;
 

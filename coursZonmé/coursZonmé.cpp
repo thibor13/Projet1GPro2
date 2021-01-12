@@ -8,6 +8,7 @@
 #include "Game.hpp"
 #include "Interp.hpp"
 #include <SFML/OpenGL.hpp>
+#include "Scene.hpp"
 
 using namespace std;
 using namespace sf;
@@ -30,6 +31,7 @@ int main()
 		return 1;
 	}
 
+	Menu menu(window.getSize().x, window.getSize().y);
 	Game g(&window);
 
 	Vector2i winPos;
@@ -54,8 +56,40 @@ int main()
 		}
 
 		sf::Event event;
-		while (window.pollEvent(event))//sort un evenement de la liste pour le traiter
+		while (window.pollEvent(event)) { //sort un evenement de la liste pour le traiter
+
+			switch (event.type) {
+
+			case Event::KeyReleased:
+				switch (event.key.code) {
+
+				case Keyboard::Up:
+					menu.MoveUp();
+					break;
+				case Keyboard::Down:
+					menu.MoveDown();
+					break;
+				case Keyboard::Return:
+					switch (menu.getPressedIndex()) {
+					case 0:
+						//load game scene 
+						break;
+					case 1:
+						//close game
+						window.close();
+						break;
+					}
+					
+				}
+				break;
+			case Event::Closed:
+				window.close();
+				break;
+			}
 			g.processInput(event);
+
+		}
+			
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::K)) {
 			shakeStrength = 15.0;
@@ -74,6 +108,7 @@ int main()
 
 		window.setView(v);
 
+		menu.draw(window);
 		g.draw(window);
 
 		window.draw(fpsCounter);
