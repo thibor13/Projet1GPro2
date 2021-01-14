@@ -9,6 +9,7 @@
 //#include "Particle.hpp"
 //#include "ParticleMan.hpp"
 #include "Char.hpp"
+#include "Ennemy.hpp"
 
 using namespace sf;
 
@@ -20,10 +21,13 @@ public:
 	sf::RectangleShape  bg;
 	HotReloadShader* bgShader = nullptr;
 	sf::Texture tex;
+	
+	Ennemy ennemiesSpawn;
 	Char mario;
+
 	bool closing = false;
 	bool shift = false;
-
+	
 	std::vector<sf::Vector2i>walls;
 	std::vector<sf::RectangleShape>wallSprites;
 

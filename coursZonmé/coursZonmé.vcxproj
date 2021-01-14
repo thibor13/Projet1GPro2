@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="coursZonmé.cpp" />
+    <ClCompile Include="Ennemy.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HotReloadShader.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -152,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="Char.hpp" />
     <ClInclude Include="Dice.hpp" />
+    <ClInclude Include="Ennemy.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="HotReloadShader.hpp" />
     <ClInclude Include="Interp.hpp" />

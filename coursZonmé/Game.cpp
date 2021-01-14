@@ -121,7 +121,7 @@ void Game::update(double dt) {
     //beforeParts.update(dt);
 
 	mario.update(dt);
-	
+	ennemiesSpawn.UpdateEnnemies();
 	//afterParts.update(dt);
 
 	g_tickTimer -= dt;
@@ -135,12 +135,15 @@ void Game::draw(sf::RenderWindow& win) {
 	if (closing) return;
 	{
 		sf::RenderStates states = sf::RenderStates::Default;
+		
 		//sf::Shader* sh = &bgShader->sh;
 		//states.shader = sh;
 		//sh->setUniform("texture", tex);
 
 		//sh->setUniform("time", g_time);
 		win.draw(bg, states);
+		ennemiesSpawn.RenderEnnemies();
+
 	}
 
 	{
