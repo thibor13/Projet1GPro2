@@ -13,6 +13,7 @@ Game::Game(sf::RenderWindow* win) {
 	this->win = win;
 	bg = sf::RectangleShape(Vector2f(win->getSize().x, win->getSize().y));
 	//displace = sf::RectangleShape(Vector2f(1280, 720));
+	spawningMore = Ennemy(this);
 
 	bool isOk = tex.loadFromFile("res/bg.jpg");
 	if (!isOk) {

@@ -3,7 +3,6 @@
 #include <vector>
 #include <ctime>
 #include "Game.hpp"
-#include "Char.hpp"
 #include "AllTexture.hpp"
 
 using namespace std;
@@ -13,10 +12,9 @@ class Ennemy {
 public:
 	
 	Ennemy() {};
-	Ennemy(Game* _game) {};
+	Ennemy(Game* _game);
 
 	AllTexture textures;
-	Char player;
 	Game *gaming = nullptr;
 
 	Sprite mob;

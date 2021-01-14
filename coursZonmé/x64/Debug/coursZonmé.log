@@ -3,8 +3,6 @@ D:\coursZonmé - Copie\coursZonmé\Game.hpp(25,21): error C3646: 'spawningMore'�
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(25,21): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(26,12): error C3646: 'mario' : spécificateur de substitution inconnu
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(26,12): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(19,13): error C3646: 'player' : spécificateur de substitution inconnu
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(19,13): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(62,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Char.cpp(7,11): warning C4305: '=' : troncation de 'double' à 'float'
@@ -20,14 +18,12 @@ D:\coursZonmé - Copie\coursZonmé\Char.cpp(72,13): warning C4305: '=' : tronca
 D:\coursZonmé - Copie\coursZonmé\Char.cpp(174,15): warning C4305: '=' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Char.cpp(175,15): warning C4305: '=' : troncation de 'double' à 'float'
   coursZonmé.cpp
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(16,8): error C2061: erreur de syntaxe : identificateur 'Game'
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(16,8): error C2535: 'Ennemy::Ennemy(void)' : fonction membre déjà définie ou déclarée
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(15): message : voir la déclaration de 'Ennemy::Ennemy'
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(19,13): error C3646: 'player' : spécificateur de substitution inconnu
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(19,13): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(20,7): error C2143: erreur de syntaxe : absence de ';' avant '*'
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(20,7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(20,24): error C2238: jetons inattendus avant ';'
+D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(15,8): error C2061: erreur de syntaxe : identificateur 'Game'
+D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(15,8): error C2535: 'Ennemy::Ennemy(void)' : fonction membre déjà définie ou déclarée
+D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(14): message : voir la déclaration de 'Ennemy::Ennemy'
+D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(18,7): error C2143: erreur de syntaxe : absence de ';' avant '*'
+D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(18,7): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(18,24): error C2238: jetons inattendus avant ';'
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(62,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Interp.hpp(22,11): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
@@ -49,15 +45,14 @@ D:\coursZonmé - Copie\coursZonmé\Char.hpp(62,15): warning C4305: 'initialisati
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(25,21): error C3646: 'spawningMore' : spécificateur de substitution inconnu
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(25,21): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-D:\coursZonmé - Copie\coursZonmé\Ennemy.cpp(7,1): error C2084: la fonction 'Ennemy::Ennemy(Game *)' a déjà un corps
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(16): message : voir la définition précédente de '{ctor}'
+D:\coursZonmé - Copie\coursZonmé\Ennemy.cpp(112,21): error C2065: 'player' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Ennemy.cpp(114,26): error C2065: 'player' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Ennemy.cpp(116,24): error C2065: 'player' : identificateur non déclaré
   Game.cpp
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(25,21): error C3646: 'spawningMore' : spécificateur de substitution inconnu
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(25,21): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(26,12): error C3646: 'mario' : spécificateur de substitution inconnu
 D:\coursZonmé - Copie\coursZonmé\Game.hpp(26,12): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(19,13): error C3646: 'player' : spécificateur de substitution inconnu
-D:\coursZonmé - Copie\coursZonmé\Ennemy.hpp(19,13): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(62,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(14,67): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
@@ -78,52 +73,53 @@ D:\coursZonmé - Copie\coursZonmé\Game.cpp(14,49): warning C4244: 'argument' :
           [
               T=float
           ]
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(41,2): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(16,2): error C2065: 'spawningMore' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(42,2): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(43,2): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(44,2): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(44,23): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(55,47): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(55,24): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(86,17): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(45,2): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(45,23): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(56,47): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(56,24): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(87,17): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(89,17): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(89,28): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(88,17): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(90,17): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(90,28): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(98,5): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(102,5): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(91,17): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(91,28): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(99,5): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(103,5): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(104,5): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(105,5): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(117,14): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(124,2): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(125,22): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(126,2): error C2065: 'spawningMore' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(129,19): warning C4244: '-=' : conversion de 'double' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(132,20): warning C4305: '=' : troncation de 'double' à 'float'
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(147,3): error C2065: 'spawningMore' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(165,2): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(176,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(106,5): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(118,14): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(125,2): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(126,22): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(127,2): error C2065: 'spawningMore' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(130,19): warning C4244: '-=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(133,20): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(148,3): error C2065: 'spawningMore' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(166,2): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(177,3): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(178,3): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(181,6): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(188,3): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(189,7): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(190,4): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(195,3): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(196,7): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(197,4): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(203,3): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(204,7): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(205,4): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(210,3): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(211,7): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(212,4): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(218,7): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(219,4): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(221,7): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(222,4): error C2065: 'mario' : identificateur non déclaré
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(224,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(179,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(182,6): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(189,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(190,7): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(191,4): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(196,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(197,7): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(198,4): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(204,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(205,7): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(206,4): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(211,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(212,7): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(213,4): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(219,7): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(220,4): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(222,7): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(223,4): error C2065: 'mario' : identificateur non déclaré
 D:\coursZonmé - Copie\coursZonmé\Game.cpp(225,3): error C2065: 'mario' : identificateur non déclaré
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(226,3): error C2065: 'mario' : identificateur non déclaré
   Génération de code en cours...
