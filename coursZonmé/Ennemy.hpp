@@ -12,9 +12,12 @@ using namespace sf;
 class Ennemy {
 public:
 	
+	Ennemy() {};
+	Ennemy(Game* _game) {};
+
 	AllTexture textures;
 	Char player;
-	Game gaming;
+	Game *gaming = nullptr;
 
 	Sprite mob;
 	Sprite smallMob;
@@ -64,7 +67,7 @@ public:
 	void SpawningEnnemies();
 	void SpawningSmallEnnemies();
 	void SpawningBigEnnemies();
-	void UpdateEnnemies();
+	void UpdateEnnemies(Vector2f& posPlayer);
 	void RenderEnnemies();
 
 };

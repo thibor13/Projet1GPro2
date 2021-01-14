@@ -3,6 +3,11 @@
 using namespace std;
 using namespace sf;
 
+Ennemy::Ennemy(Game *_game)
+{
+	gaming = _game;
+}
+
 void Ennemy::SpawningEnnemies() {
 
 	float posY = float(rand() % 720);
@@ -36,19 +41,19 @@ void Ennemy::SpawningBigEnnemies() {
 void Ennemy::RenderEnnemies() {
 
 	for (auto& rendEnnemies : ennemies)
-		gaming.win->draw(rendEnnemies);
+		gaming->win->draw(rendEnnemies);
 	for (auto& rendEnnemiesSmall : smallEnnemies)
-		gaming.win->draw(rendEnnemiesSmall);
+		gaming->win->draw(rendEnnemiesSmall);
 	for (auto& rendEnnemiesBig : bigEnnemies)
-		gaming.win->draw(rendEnnemiesBig);
+		gaming->win->draw(rendEnnemiesBig);
 }
 
-void Ennemy::UpdateEnnemies() {
+void Ennemy::UpdateEnnemies(Vector2f &posPlayer) {
 
 	//Pr eviter le pop sur player
 	CircleShape notSpawnCircle;
-	notSpawnCircle.setRadius(3.5f);
-	notSpawnCircle.setPosition(player.spr.getPosition().x, player.spr.getPosition().y);
+	notSpawnCircle.setRadius(4.5f);
+	notSpawnCircle.setPosition(posPlayer.x,posPlayer.y);
 	notSpawnCircle.getPointCount();
 
 	if (boundBoxMob.contains(notSpawnCircle.getPoint(notSpawnCircle.getPointCount())))

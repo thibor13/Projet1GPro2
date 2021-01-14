@@ -120,8 +120,10 @@ void Game::update(double dt) {
 	//if (displaceShader) displaceShader->update(dt);
     //beforeParts.update(dt);
 
+	
 	mario.update(dt);
-	spawningMore.UpdateEnnemies();
+	Vector2f currentPos(mario.spr.getPosition());
+	spawningMore.UpdateEnnemies(currentPos);
 	//afterParts.update(dt);
 
 	g_tickTimer -= dt;
