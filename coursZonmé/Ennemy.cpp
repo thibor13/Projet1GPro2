@@ -1,4 +1,5 @@
 #include "Ennemy.hpp"
+#include "Game.hpp"
 
 using namespace std;
 using namespace sf;
@@ -14,6 +15,7 @@ void Ennemy::SpawningEnnemies() {
 	float posX = float(rand() % 1280);
 
 	mob.setPosition(posX, posY);
+	mob.setScale(Vector2f(0.08f, 0.16f));
 	mob.setTexture(textures.kdoMedium);
 	ennemies.push_back(mob);
 }
@@ -24,6 +26,7 @@ void Ennemy::SpawningSmallEnnemies() {
 	float posX = float(rand() % 1280);
 
 	smallMob.setPosition(posX, posY);
+	smallMob.setScale(Vector2f(0.08f, 0.16f));
 	smallMob.setTexture(textures.kdoSmall);
 	smallEnnemies.push_back(smallMob);
 }
@@ -34,6 +37,7 @@ void Ennemy::SpawningBigEnnemies() {
 	float posX = float(rand() % 1280);
 
 	bigMob.setPosition(posX, posY);
+	bigMob.setScale(Vector2f(0.08f, 0.16f));
 	bigMob.setTexture(textures.kdoBig);
 	bigEnnemies.push_back(bigMob);
 }
@@ -52,21 +56,22 @@ void Ennemy::UpdateEnnemies(Vector2f &posPlayer) {
 
 	//Pr eviter le pop sur player
 	CircleShape notSpawnCircle;
-	notSpawnCircle.setRadius(4.5f);
+	notSpawnCircle.setRadius(100);
+	notSpawnCircle.setOrigin(4.5f, 4.5f);
 	notSpawnCircle.setPosition(posPlayer.x,posPlayer.y);
-	notSpawnCircle.getPointCount();
+	
 
-	if (boundBoxMob.contains(notSpawnCircle.getPoint(notSpawnCircle.getPointCount())))
+	if (boundBoxMob.contains(notSpawnCircle.getPosition()))
 		cantSpawn = true;
 	else
 		cantSpawn = false;
 
-	if (boundBoxSmallMob.contains(notSpawnCircle.getPoint(notSpawnCircle.getPointCount())))
+	if (boundBoxSmallMob.contains(notSpawnCircle.getPosition()))
 		cantSpawnSmall = true;
 	else
 		cantSpawnSmall = false;
 
-	if (boundBoxBigMob.contains(notSpawnCircle.getPoint(notSpawnCircle.getPointCount())))
+	if (boundBoxBigMob.contains(notSpawnCircle.getPosition()))
 		cantSpawnBig = true;
 	else
 		cantSpawnBig = false;
@@ -106,12 +111,12 @@ void Ennemy::UpdateEnnemies(Vector2f &posPlayer) {
 				spawnTimerBig += 1.f;
 		}
 	}
-
+	/*
 	//ennemies moving to the player
 	for (auto& moveEnnemies : ennemies)
 		moveEnnemies.move(player.spr.getPosition() * speedNormal);
 	for (auto& moveEnnemiesSmall : smallEnnemies)
 		moveEnnemiesSmall.move(player.spr.getPosition() * speedSmall);
 	for (auto& moveEnnemiesBig : bigEnnemies)
-		moveEnnemiesBig.move(player.spr.getPosition() * speedBig);
+		moveEnnemiesBig.move(player.spr.getPosition() * speedBig);*/
 }

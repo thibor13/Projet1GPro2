@@ -2,12 +2,12 @@
 #include "SFML/Graphics.hpp"
 #include <vector>
 #include <ctime>
-#include "Game.hpp"
 #include "AllTexture.hpp"
 
 using namespace std;
 using namespace sf;
 
+class Game;
 class Ennemy {
 public:
 	
