@@ -22,7 +22,6 @@ Menu::Menu(float width, float height) {
 
 Menu::~Menu(){
 
-
 }
 
 void Menu::draw(RenderWindow& window) {

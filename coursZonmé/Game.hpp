@@ -22,7 +22,7 @@ public:
 	HotReloadShader* bgShader = nullptr;
 	sf::Texture tex;
 	
-	Ennemy ennemiesSpawn;
+	Ennemy spawningMore;
 	Char mario;
 
 	bool closing = false;

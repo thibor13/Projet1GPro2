@@ -1,6 +1,5 @@
 #include "Ennemy.hpp"
 
-
 using namespace std;
 using namespace sf;
 

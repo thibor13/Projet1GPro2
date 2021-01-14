@@ -62,5 +62,8 @@
     <ClInclude Include="Ennemy.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.hpp">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

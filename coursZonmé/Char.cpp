@@ -18,6 +18,11 @@ void Char::setPosition(int rpx, int rpy) {
 	ry = rpy - (cy * GRID_SIZE);
 }
 
+void GainXp() {
+
+
+}
+
 void Char::onWallCollision() {
 	if (state == WalkTo) stop();
 }

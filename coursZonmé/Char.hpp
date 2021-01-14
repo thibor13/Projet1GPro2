@@ -3,6 +3,7 @@
 #include "SFML/Graphics.hpp"
 #include <functional>
 #include "AllTexture.hpp"
+#include "Ennemy.hpp"
 
 using namespace sf;
 using namespace std;
@@ -26,10 +27,15 @@ public:
 	static constexpr int GRID_SIZE = 16;
 	AllTexture texturing;
 	sf::Sprite spr;
+
 	float duration = 0.0f;
 	int currentFrame;
 	int lastFrame;
 	int maxFrame;
+
+	float xp = 0.f;
+
+	void GainXp();
 
 	Clock cloks;
 	Time dt;
