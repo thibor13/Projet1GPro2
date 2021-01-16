@@ -66,49 +66,14 @@ void Game::processInput(sf::Event ev) {
 		return;
 	}
 
-
-	//add walls on click
+	//fire on click
 	if (ev.type == sf::Event::MouseButtonPressed) {
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::LShift)) {
-			int wx = ev.mouseButton.x / Char::GRID_SIZE;
-			int wy = ev.mouseButton.y / Char::GRID_SIZE;
-			for (auto iter = walls.begin(); iter != walls.end(); iter++) {
-				auto& w = *iter;
-				if (w.x == wx && w.y == wy) {
-					iter = walls.erase(iter);
-					cacheWalls();
-					return;
-				}
-			}
-			
-		}
-		else {
-			float destRx = 1.0 * ev.mouseButton.x / Char::GRID_SIZE;
-			float destRy = 1.0 * ev.mouseButton.y / Char::GRID_SIZE;
-
-			float myRx = mario.cx + mario.rx;
-			float myRy = mario.cy + mario.ry;
-
-			float dx = destRx - myRx;
-			float dy = destRy - myRy;
-
-			float len = sqrt(dx * dx + dy * dy);
-
-			if (len != 0.0) {
-				mario.setState(WalkTo);
-
-				float dirX = dx / len;
-				float dirY = dy / len;
-				mario.speedX = dirX * 10;
-				mario.speedY = dirY * 10;
-				mario.destX = destRx;
-				mario.destY = destRy;
-			}
-		}
+		sf::Vector2f mousePosition = win->mapPixelToCoords(sf::Mouse::getPosition(*win));
+		sf::Vector2f trajectoire ((mousePosition.x - mario.spr.getPosition().x), (mousePosition.y - mario.spr.getPosition().y));
+		bulletSpawn.spawningBullet(trajectoire);
 	}
 }
-
 
 static float g_time = 0.0;
 static float g_tickTimer = 0.0;
@@ -125,6 +90,7 @@ void Game::update(double dt) {
 	mario.update(dt);
 	Vector2f currentPos(mario.spr.getPosition());
 	spawningMore.UpdateEnnemies(currentPos);
+	bulletSpawn.updateBullets(dt);
 	//afterParts.update(dt);
 
 	g_tickTimer -= dt;
@@ -146,7 +112,7 @@ void Game::draw(sf::RenderWindow& win) {
 		//sh->setUniform("time", g_time);
 		win.draw(bg, states);
 		spawningMore.RenderEnnemies();
-
+		bulletSpawn.bulletRender();
 	}
 
 	{

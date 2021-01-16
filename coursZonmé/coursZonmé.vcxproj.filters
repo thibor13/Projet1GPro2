@@ -33,6 +33,9 @@
     <ClCompile Include="Ennemy.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="BulletManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.hpp">
@@ -62,7 +65,7 @@
     <ClInclude Include="Ennemy.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="Bullet.hpp">
+    <ClInclude Include="BulletManager.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,7 +1,5 @@
 #pragma once
 
-#pragma once
-
 #include <vector>
 #include "SFML/Graphics.hpp"
 #include "SFML/System.hpp"
@@ -10,6 +8,7 @@
 //#include "ParticleMan.hpp"
 #include "Char.hpp"
 #include "Ennemy.hpp"
+#include "BulletManager.hpp"
 
 using namespace sf;
 
@@ -22,6 +21,7 @@ public:
 	HotReloadShader* bgShader = nullptr;
 	sf::Texture tex;
 	
+	BulletManager bulletSpawn;
 	Ennemy spawningMore;
 	Char mario;
 

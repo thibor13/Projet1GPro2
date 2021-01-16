@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BulletManager.cpp" />
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="coursZonmé.cpp" />
     <ClCompile Include="Ennemy.cpp" />
@@ -151,7 +152,7 @@
     <ClCompile Include="Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bullet.hpp" />
+    <ClInclude Include="BulletManager.hpp" />
     <ClInclude Include="Char.hpp" />
     <ClInclude Include="Dice.hpp" />
     <ClInclude Include="Ennemy.hpp" />

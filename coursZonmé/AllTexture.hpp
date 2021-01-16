@@ -17,7 +17,7 @@ public:
 	Texture kdoMedium;
 	Texture kdoBig;
 
-	Texture Snowball;
+	Texture snowballs;
 
 	AllTexture() {
 
@@ -30,7 +30,7 @@ public:
 			printf("Not load : kdoBig");
 
 		//Texture Bullet
-		if (!Snowball.loadFromFile("res/SNOWBALL.PNG"))
+		if (!snowballs.loadFromFile("res/SNOWBALL.JPG"))
 			printf("Not load : bullet");
 
 		//Texture perso
