@@ -3,6 +3,7 @@
 #include "AllTexture.hpp"
 #include <vector>
 
+
 using namespace sf;
 using namespace std;
 
@@ -12,15 +13,21 @@ public:
 
 	BulletManager() {};
 	BulletManager(Game* _games);
+
+	class Bullet {
+	public:
+
+		Sprite snowBall;
+		Vector2f traj;
+
+	};
 	
 	Game* games = nullptr;
 	AllTexture textures;
 
 	float BulletSpeed = 4;
-	vector<Sprite> bullets;
-
+	vector<Bullet> bullets;
 	
-
 	bool IsDestroyed = false;
 	void DestroyBullet(bool);
 	
@@ -28,13 +35,7 @@ public:
 	void spawningBullet(Vector2f& trajectoire);
 	void updateBullets(float dt);
 
-	class Bullet {
-	public:
-
-		Sprite snowBall;
-		Vector2f traj;
-		
-	};
+	
 
 };
 

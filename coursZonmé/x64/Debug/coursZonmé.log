@@ -1,28 +1,4 @@
-﻿  Game.cpp
+﻿  BulletManager.cpp
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(62,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(14,67): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(14,49): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(56,47): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(56,24): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(83,14): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(93,28): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(96,19): warning C4244: '-=' : conversion de 'double' en 'float', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\Game.cpp(99,20): warning C4305: '=' : troncation de 'double' à 'float'
   coursZonmé.vcxproj -> D:\coursZonmé - Copie\x64\Debug\coursZonmé.exe

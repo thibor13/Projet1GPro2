@@ -30,7 +30,7 @@ public:
 			printf("Not load : kdoBig");
 
 		//Texture Bullet
-		if (!snowballs.loadFromFile("res/SNOWBALL.JPG"))
+		if (!snowballs.loadFromFile("res/SNOWBALL.PNG"))
 			printf("Not load : bullet");
 
 		//Texture perso
