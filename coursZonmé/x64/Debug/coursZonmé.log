@@ -1,4 +1,12 @@
 ﻿  BulletManager.cpp
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(62,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(26,2): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(33,28): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(40,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(42,29): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(48,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(50,29): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(56,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(58,29): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
   coursZonmé.vcxproj -> D:\coursZonmé - Copie\x64\Debug\coursZonmé.exe
