@@ -3,7 +3,7 @@
 #include "SFML/Graphics.hpp"
 #include <functional>
 #include "AllTexture.hpp"
-#include "Ennemy.hpp"
+#include "EnnemyManager.hpp"
 
 using namespace sf;
 using namespace std;
@@ -36,6 +36,7 @@ public:
 	float xp = 0.f;
 
 	void GainXp();
+	float lifeSpr = 100;
 
 	Clock cloks;
 	Time dt;

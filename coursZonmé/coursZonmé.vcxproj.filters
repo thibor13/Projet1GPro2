@@ -30,10 +30,10 @@
     <ClCompile Include="Scene.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Ennemy.cpp">
+    <ClCompile Include="BulletManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="BulletManager.cpp">
+    <ClCompile Include="EnnemyManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,10 +62,10 @@
     <ClInclude Include="Scene.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="Ennemy.hpp">
+    <ClInclude Include="BulletManager.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="BulletManager.hpp">
+    <ClInclude Include="EnnemyManager.hpp">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>

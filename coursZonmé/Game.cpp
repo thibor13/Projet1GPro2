@@ -13,7 +13,7 @@ Game::Game(sf::RenderWindow* win) {
 	this->win = win;
 	bg = sf::RectangleShape(Vector2f(win->getSize().x, win->getSize().y));
 	//displace = sf::RectangleShape(Vector2f(1280, 720));
-	spawningMore = Ennemy(this);
+	spawningMore = EnnemyManager(this);
 	bulletSpawn = BulletManager(this);
 
 	bool isOk = tex.loadFromFile("res/bg.jpg");
@@ -44,9 +44,6 @@ Game::Game(sf::RenderWindow* win) {
 	mario.setCellPosition(cols >> 1, lastLine -25); // spr pos
 	mario.spr.setScale(sf::Vector2f(0.08f, 0.16f));
 	mario.spr.setTexture(mario.texturing.arrayIdle[0]);
-	
-	
-	
 };
 
 void Game::cacheWalls()
@@ -79,25 +76,32 @@ void Game::processInput(sf::Event ev) {
 static float g_time = 0.0;
 static float g_tickTimer = 0.0;
 void Game::update(double dt) {
+
 	pollInput(dt);
-
 	g_time += dt;
-	if (bgShader) bgShader->update(dt);
-	//if (doubleShader) doubleShader->update(dt);
-	//if (displaceShader) displaceShader->update(dt);
-    //beforeParts.update(dt);
-
-	
-	mario.update(dt);
-	Vector2f currentPos(mario.spr.getPosition());
-	spawningMore.UpdateEnnemies(currentPos);
-	bulletSpawn.updateBullets(dt);
-	//afterParts.update(dt);
 
 	g_tickTimer -= dt;
 	if (g_tickTimer <= 0.0) {
 		onFileTick();
 		g_tickTimer = 0.1;
+	}
+	//if (doubleShader) doubleShader->update(dt);
+	//if (displaceShader) displaceShader->update(dt);
+    //beforeParts.update(dt);
+	if (mario.lifeSpr <= 0) {
+		gameOver = true;
+	}
+	if (!gameOver) {
+		
+		if (bgShader) bgShader->update(dt);
+
+		mario.update(dt);
+		Vector2f currentPos(mario.spr.getPosition());
+		spawningMore.UpdateEnnemies(currentPos, dt);
+		bulletSpawn.updateBullets(dt);
+		//afterParts.update(dt);
+
+		
 	}
 }
 
@@ -181,7 +185,7 @@ void Game::pollInput(double dt) {
 		moved = true;
 	}
 
-	if (moved) {
+	if (moved && mario.state == Cover || mario.state == Idle) {
 
 		if (mario.state == Cover)
 			mario.setState(Walking);

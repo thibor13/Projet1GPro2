@@ -146,7 +146,7 @@
     <ClCompile Include="BulletManager.cpp" />
     <ClCompile Include="Char.cpp" />
     <ClCompile Include="coursZonmé.cpp" />
-    <ClCompile Include="Ennemy.cpp" />
+    <ClCompile Include="EnnemyManager.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="HotReloadShader.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -155,7 +155,7 @@
     <ClInclude Include="BulletManager.hpp" />
     <ClInclude Include="Char.hpp" />
     <ClInclude Include="Dice.hpp" />
-    <ClInclude Include="Ennemy.hpp" />
+    <ClInclude Include="EnnemyManager.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="HotReloadShader.hpp" />
     <ClInclude Include="Interp.hpp" />

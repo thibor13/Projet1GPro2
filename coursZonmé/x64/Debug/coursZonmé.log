@@ -1,12 +1,88 @@
 ﻿  BulletManager.cpp
-D:\coursZonmé - Copie\coursZonmé\Char.hpp(62,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\EnnemyManager.hpp(20,22): error C3646: 'bullet' : spécificateur de substitution inconnu
+D:\coursZonmé - Copie\coursZonmé\EnnemyManager.hpp(20,22): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
 D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(26,2): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(33,28): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(40,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(42,29): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(48,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(50,29): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(56,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
-D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(58,29): warning C4553: '==' : résultat de l'expression non utilisé ; souhaitiez-vous utiliser '=' ?
-  coursZonmé.vcxproj -> D:\coursZonmé - Copie\x64\Debug\coursZonmé.exe
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(64,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(21,2): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(36,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(45,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\BulletManager.cpp(53,4): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+  Char.cpp
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C2143: erreur de syntaxe : absence de ';' avant '*'
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,33): error C2238: jetons inattendus avant ';'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(64,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(7,11): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(15,11): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(18,11): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(32,19): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(33,19): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(35,15): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(39,13): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(50,13): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(61,13): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(72,13): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(174,15): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.cpp(175,15): warning C4305: '=' : troncation de 'double' à 'float'
+  coursZonmé.cpp
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C2143: erreur de syntaxe : absence de ';' avant '*'
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,33): error C2238: jetons inattendus avant ';'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(64,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Interp.hpp(22,11): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Interp.hpp(26,1): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Interp.hpp(29,14): warning C4244: 'return' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\coursZonmé.cpp(34,48): warning C4244: 'argument' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+D:\coursZonmé - Copie\coursZonmé\coursZonmé.cpp(34,28): warning C4244: 'argument' : conversion de 'T' en 'float', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+D:\coursZonmé - Copie\coursZonmé\coursZonmé.cpp(118,24): warning C4305: '*=' : troncation de 'double' à 'float'
+  EnnemyManager.cpp
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C2143: erreur de syntaxe : absence de ';' avant '*'
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,33): error C2238: jetons inattendus avant ';'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(64,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\EnnemyManager.cpp(76,2): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\EnnemyManager.cpp(84,2): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\EnnemyManager.cpp(92,2): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+  Game.cpp
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C2143: erreur de syntaxe : absence de ';' avant '*'
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,15): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+D:\coursZonmé - Copie\coursZonmé\BulletManager.hpp(28,33): error C2238: jetons inattendus avant ';'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(63,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Char.hpp(64,15): warning C4305: 'initialisation' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(14,67): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(14,49): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(54,47): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(54,24): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(81,14): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(83,19): warning C4244: '-=' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(86,20): warning C4305: '=' : troncation de 'double' à 'float'
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(100,43): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+D:\coursZonmé - Copie\coursZonmé\Game.cpp(101,29): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+  Génération de code en cours...

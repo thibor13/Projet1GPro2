@@ -7,7 +7,7 @@
 //#include "Particle.hpp"
 //#include "ParticleMan.hpp"
 #include "Char.hpp"
-#include "Ennemy.hpp"
+#include "EnnemyManager.hpp"
 #include "BulletManager.hpp"
 
 using namespace sf;
@@ -22,12 +22,13 @@ public:
 	sf::Texture tex;
 	
 	BulletManager bulletSpawn;
-	Ennemy spawningMore;
+	EnnemyManager spawningMore;
 	Char mario;
 
 	bool closing = false;
 	bool shift = false;
-	
+	bool gameOver = false;
+
 	std::vector<sf::Vector2i>walls;
 	std::vector<sf::RectangleShape>wallSprites;
 

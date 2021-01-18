@@ -2,7 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "AllTexture.hpp"
 #include <vector>
-#include "Ennemy.hpp"
+#include "EnnemyManager.hpp"
 
 
 using namespace sf;
@@ -25,7 +25,7 @@ public:
 	
 	Game* games = nullptr;
 	AllTexture textures;
-	Ennemy* ennemy = nullptr;
+	EnnemyManager* ennemy = nullptr;
 
 	float BulletSpeed = 4;
 	vector<Bullet> bullets;
